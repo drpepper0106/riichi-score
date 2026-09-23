@@ -1,0 +1,26 @@
+{
+  "name": "riichi-score-companion",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "node scripts/ensure-node.mjs && NODE_OPTIONS='--import ./scripts/polyfill-crypto.mjs' vite",
+    "build": "node scripts/ensure-node.mjs && node scripts/generate-icons.mjs && NODE_OPTIONS='--import ./scripts/polyfill-crypto.mjs' vite build",
+    "preview": "node scripts/ensure-node.mjs && NODE_OPTIONS='--import ./scripts/polyfill-crypto.mjs' vite preview",
+    "icons": "node scripts/generate-icons.mjs"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "workbox-window": "^7.4.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "sharp": "^0.35.4",
+    "vite": "^6.0.7",
+    "vite-plugin-pwa": "^1.3.0"
+  }
+}
