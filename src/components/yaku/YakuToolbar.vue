@@ -43,3 +43,74 @@ const closedHint = computed(() => {
   return state.closed ? '当前门前清' : '当前有副露'
 })
 </script>
+
+<style scoped>
+.yaku-toolbar {
+  padding: 16px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.yaku-toolbar input[type='search'] {
+  width: 100%;
+  font-size: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  outline-offset: 3px;
+}
+
+.filter-chips {
+  margin: 14px 0;
+}
+
+.filter-chips :deep(.choices) {
+  gap: 5px;
+}
+
+.filter-chips :deep(.choices button) {
+  min-width: 40px;
+  font-size: 12px;
+  padding: 8px 5px;
+}
+
+.yaku-toolbar .mode-line {
+  margin-bottom: 0;
+}
+
+.mode-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.check-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  min-height: 44px;
+}
+
+.check-label input[type='checkbox'] {
+  accent-color: var(--green);
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+.yaku-toolbar > :deep(.choices) {
+  margin-top: 14px;
+}
+</style>

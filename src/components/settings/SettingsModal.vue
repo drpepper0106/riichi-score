@@ -37,3 +37,69 @@ const toggles = [
   { key: 'doubleYakuman', title: '特殊双倍役满', desc: '国士十三面、四暗刻单骑、纯正九莲、大四喜' },
 ]
 </script>
+
+<style scoped>
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  color: var(--muted);
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.note {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  padding: 12px 14px;
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+.field {
+  margin: 20px 0;
+}
+
+.field > label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+}
+
+.setting-row b {
+  font-size: 14px;
+}
+
+.setting-row small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.setting-row input {
+  width: 23px;
+  height: 23px;
+}
+
+.quiet {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+}
+</style>

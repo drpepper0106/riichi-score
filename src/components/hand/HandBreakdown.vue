@@ -80,3 +80,101 @@ function altKey(a) {
   return `${a.kind}-${a.han}-${a.fu.value}-${a.wait}`
 }
 </script>
+
+<style scoped>
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.auto-yaku-list > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid #ecf0eb;
+}
+
+.division-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.division-group {
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+
+.division-group.completed {
+  border-color: #ba963b;
+  background: #fbf7e9;
+}
+
+.division-group small {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  padding-top: 5px;
+  text-align: center;
+}
+
+.alternative {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 1.7;
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+}
+
+.alternative b {
+  white-space: nowrap;
+}
+
+details > summary {
+  cursor: pointer;
+  font-size: 14px;
+  min-height: 44px;
+  line-height: 1.5;
+  padding: 12px 0;
+  color: var(--green);
+}
+
+.lines {
+  padding: 12px 0 0;
+}
+
+.lines > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.lines .sum {
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  color: var(--green);
+  font-weight: 600;
+}
+</style>

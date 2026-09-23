@@ -86,3 +86,33 @@ function restoreRules() {
   notify('已恢复默认规则')
 }
 </script>
+
+<style scoped>
+#app-main {
+  padding: 0 14px;
+  /* fallback + env：Tab(64) + summary(48) + 间距，再加 home indicator */
+  padding-bottom: calc(160px + constant(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(160px + env(safe-area-inset-bottom, 0px));
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  color: var(--muted);
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.note {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  padding: 12px 14px;
+  background: var(--bg);
+  border-radius: 10px;
+}
+</style>

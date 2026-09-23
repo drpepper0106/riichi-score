@@ -70,3 +70,37 @@ const mobileLabel = computed(() => {
   return `${c.total}/${c.target} 张 · ${c.missing[0] || '继续填写'} ↑`
 })
 </script>
+
+<style scoped>
+.workspace {
+  display: block;
+}
+
+.hand-workspace {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-column {
+  padding-bottom: 0;
+}
+
+.hand-workspace > .input-column {
+  width: 100%;
+  order: 0;
+  padding-bottom: 0;
+}
+
+.hand-workspace > :deep(.hand-result) {
+  order: 1;
+  width: 100%;
+  scroll-margin-bottom: calc(160px + constant(safe-area-inset-bottom, 0px));
+  scroll-margin-bottom: calc(160px + env(safe-area-inset-bottom, 0px));
+}
+
+.footnote {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+</style>

@@ -42,3 +42,60 @@ const kindOpts = [
   { v: 'seven', t: '七对子', sub: '七组不同对子' },
 ]
 </script>
+
+<style scoped>
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.note {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  padding: 12px 14px;
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+.field {
+  margin: 20px 0;
+}
+
+.field > label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.basic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.basic-grid .field {
+  margin: 0;
+}
+
+.head-value {
+  margin-left: auto;
+  color: var(--green);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.basic-grid :deep(.choices button) {
+  min-width: 50px;
+}
+</style>

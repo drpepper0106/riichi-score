@@ -101,3 +101,188 @@ function setType(v) {
   else props.builder.meldType = v
 }
 </script>
+
+<style scoped>
+.entry-pad {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  scroll-margin-top: 15px;
+}
+
+.pad-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.pad-heading h3 {
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.pad-context,
+.pad-types,
+.suit-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 8px 0;
+}
+
+.pad-context > button,
+.pad-types > button,
+.suit-selector > button {
+  flex: 1;
+  padding: 10px 4px;
+  font-size: 12px;
+  min-width: 0;
+}
+
+.all-tiles-pad .pad-types > button {
+  font-size: 13px;
+}
+
+.entry-pad button.selected {
+  border-color: var(--green);
+  background: var(--light);
+  color: var(--green);
+  box-shadow: inset 0 0 0 1px var(--green);
+}
+
+.entry-pad button.selected::before {
+  content: none;
+}
+
+.suit-selector {
+  margin-top: 14px;
+}
+
+.suit-selector .suit-button {
+  font-size: 19px;
+  font-family: serif;
+  font-weight: 700;
+}
+
+.suit-button.suit-0 {
+  color: #a4342d;
+}
+
+.suit-button.suit-1 {
+  color: #344e89;
+}
+
+.suit-button.suit-2 {
+  color: #237449;
+}
+
+.pad-instruction {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 12px 0;
+}
+
+.tile-library {
+  display: grid;
+  gap: 7px;
+  margin: 14px 0 4px;
+}
+
+.library-row {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.library-tile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  padding: 3px 0;
+  border: 0;
+  background: none;
+  min-height: 53px;
+  border-radius: 5px;
+}
+
+.library-tile :deep(.mahjong-tile) {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 44 / 68;
+  max-width: 48px;
+  min-width: 0;
+  padding: 3px 2px 12px;
+  border-bottom-width: 3px;
+  border-radius: 4px;
+}
+
+.library-tile :deep(.tile-caption) {
+  font-size: 8px;
+}
+
+.library-tile:hover:not(:disabled) {
+  background: #dceadd;
+}
+
+.library-tile:active:not(:disabled) {
+  transform: translateY(2px);
+}
+
+.library-tile:disabled {
+  opacity: 0.36;
+}
+
+.copy-count {
+  position: absolute;
+  right: -1px;
+  top: -3px;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 3px;
+  background: var(--green);
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.text-button {
+  border: 0;
+  background: none;
+  color: var(--green);
+  font-size: 13px;
+  padding: 8px 4px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.quiet {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+}
+
+.full {
+  width: 100%;
+}
+
+.all-tiles-pad {
+  margin-top: 10px;
+  padding-top: 7px;
+}
+
+.all-tiles-pad .pad-instruction {
+  min-height: 20px;
+  margin: 10px 0;
+}
+
+.all-tiles-pad .pad-types {
+  margin-bottom: 0;
+}
+</style>

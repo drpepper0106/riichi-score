@@ -97,3 +97,78 @@ function onJumpError(err) {
   scrollTo(/役|番|宝牌/.test(err) ? 'han-section' : 'fu-section')
 }
 </script>
+
+<style scoped>
+.workspace {
+  display: block;
+}
+
+.input-column {
+  padding-bottom: 30px;
+}
+
+.footnote {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.panel.breakdown {
+  margin-bottom: 10px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+details > summary {
+  cursor: pointer;
+  font-size: 14px;
+  min-height: 44px;
+  line-height: 1.5;
+  padding: 12px 0;
+  color: var(--green);
+}
+
+details.panel > summary {
+  font-weight: 600;
+  font-size: 16px;
+  display: list-item;
+}
+
+summary > small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.lines {
+  padding: 12px 0 0;
+}
+
+.lines > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.lines .sum {
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  color: var(--green);
+  font-weight: 600;
+}
+</style>

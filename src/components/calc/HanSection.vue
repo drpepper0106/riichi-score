@@ -66,3 +66,92 @@ function toggleYakuman() {
   state.hanMode = 'manual'
 }
 </script>
+
+<style scoped>
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.quiet {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+}
+
+.mode-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.mode-line .hint {
+  margin: 0;
+}
+
+.text-button {
+  border: 0;
+  background: none;
+  color: var(--green);
+  font-size: 13px;
+  padding: 8px 4px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.han-choices {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.han-choices button {
+  padding: 10px 6px;
+  font-size: 16px;
+}
+
+.han-choices .selected {
+  background: var(--light);
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.yakuman-entry {
+  margin-top: 10px;
+}
+
+.selected-summary {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 9px;
+  color: var(--green);
+  font-size: 12px;
+  background: var(--light);
+}
+
+.field-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+</style>

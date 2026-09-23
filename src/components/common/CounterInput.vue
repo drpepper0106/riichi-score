@@ -40,3 +40,45 @@ function onInput(e) {
   emit('update:modelValue', clamp(n))
 }
 </script>
+
+<style scoped>
+.counter-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  margin: 18px 0;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 150px;
+  flex-shrink: 0;
+}
+
+.counter button {
+  border: 0;
+  border-radius: 0;
+  min-width: 42px;
+  padding: 8px;
+}
+
+.counter input {
+  width: 50px;
+  text-align: center;
+  border: 0;
+  min-height: 44px;
+  background: transparent;
+  color: var(--ink);
+  -moz-appearance: textfield;
+}
+
+.counter input::-webkit-inner-spin-button {
+  appearance: none;
+}
+</style>

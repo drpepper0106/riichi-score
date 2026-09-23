@@ -52,3 +52,87 @@ function onClear() {
   else resetFeature()
 }
 </script>
+
+<style scoped>
+.entry-switch {
+  display: block;
+  padding: 14px;
+  margin: 0 0 16px;
+  background: #e5eeea;
+  border-radius: 16px;
+}
+
+.entry-switch p {
+  font-size: 14px;
+  margin: 7px 0 0;
+}
+
+.entry-switch > div:first-child {
+  display: none;
+}
+
+.entry-switch > :deep(.choices) {
+  min-width: 0;
+}
+
+.entry-switch :deep(.choices button) {
+  background: #f8fbf9;
+}
+
+.entry-switch :deep(.choices button.selected) {
+  background: white;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  color: var(--muted);
+}
+
+.calculation-actions {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  margin: -8px 0 14px;
+  background: rgba(242, 245, 244, 0.97);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px #173c370a;
+}
+
+.calculation-actions > span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.calculation-actions > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clear-hand {
+  border: 1px solid #ad6351;
+  background: #fff2e9;
+  color: #923e2c;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.restore-hand {
+  background: white;
+  font-size: 13px;
+  padding: 10px 8px;
+}
+
+.calculation-actions ~ :deep(.workspace [id]) {
+  scroll-margin-top: 90px;
+}
+</style>

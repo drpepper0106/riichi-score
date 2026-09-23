@@ -31,3 +31,45 @@ function onBackdrop(e) {
   if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) close()
 }
 </script>
+
+<style scoped>
+dialog {
+  border: 0;
+  border-radius: 22px;
+  padding: 30px;
+  width: calc(100% - 28px);
+  color: var(--ink);
+  max-height: 85dvh;
+}
+
+dialog::backdrop {
+  background: #102c2866;
+  backdrop-filter: blur(3px);
+}
+
+.close-modal {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border: 0;
+  font-size: 24px;
+  padding: 0;
+  width: 40px;
+  background: transparent;
+}
+
+:deep(.payment-detail) {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+  font-size: 14px;
+}
+
+:deep(.payment-detail b) {
+  font-size: 21px;
+  color: var(--green);
+}
+</style>

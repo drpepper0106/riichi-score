@@ -93,3 +93,72 @@ function onType(type) {
   setMeldType(props.index, type)
 }
 </script>
+
+<style scoped>
+.meld {
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 16px;
+  margin: 12px 0;
+  background: #fbfcfb;
+}
+
+.meld .field {
+  margin: 16px 0 0;
+}
+
+.meld-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.meld-title h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.meld-title h3 > span {
+  display: inline-grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  background: var(--light);
+  border-radius: 50%;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.fu-badge {
+  font-size: 12px;
+  color: var(--green);
+}
+
+.meld .hint {
+  margin: 10px 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.meld .note {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  padding: 12px 14px;
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+.field {
+  margin: 20px 0;
+}
+
+.field > label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+</style>

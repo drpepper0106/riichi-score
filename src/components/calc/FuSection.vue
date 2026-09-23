@@ -97,3 +97,131 @@ const waitExample = computed(() => ({
 const pairFu = (v) => optionFu('pair', v, state.rules)
 const waitFu = (v) => optionFu('wait', v, state.rules)
 </script>
+
+<style scoped>
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.field {
+  margin: 20px 0;
+}
+
+.field > label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.head-value {
+  margin-left: auto;
+  color: var(--green);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.special {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 24px 0 0;
+}
+
+.special > b {
+  font-size: 42px;
+  color: var(--green);
+  white-space: nowrap;
+}
+
+.special > b small {
+  font-size: 16px;
+}
+
+.special p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.row-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+  gap: 8px;
+}
+
+.row-heading h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-button {
+  border: 0;
+  background: none;
+  color: var(--green);
+  font-size: 13px;
+  padding: 8px 4px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.checks label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  min-height: 44px;
+  flex-wrap: wrap;
+}
+
+.checks :deep(.option-fu) {
+  display: inline-block;
+  margin: 0 0 0 4px;
+  font-size: 11px;
+}
+
+.checks input[type='checkbox'] {
+  accent-color: var(--green);
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+details > summary {
+  cursor: pointer;
+  font-size: 14px;
+  min-height: 44px;
+  line-height: 1.5;
+  padding: 12px 0;
+  color: var(--green);
+}
+
+.inline-error {
+  color: var(--red);
+  font-size: 13px;
+  line-height: 1.8;
+  background: #fff1ec;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 14px 0;
+}
+</style>

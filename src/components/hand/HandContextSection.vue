@@ -60,3 +60,69 @@ const events = [
   ['chiihou', '地和'],
 ]
 </script>
+
+<style scoped>
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.field {
+  margin: 20px 0;
+}
+
+.field > label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.event-grid > label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  min-height: 44px;
+}
+
+.event-grid input[type='checkbox'] {
+  accent-color: var(--green);
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+details > summary {
+  cursor: pointer;
+  font-size: 14px;
+  min-height: 44px;
+  line-height: 1.5;
+  padding: 12px 0;
+  color: var(--green);
+}
+
+:deep(.choices > button) {
+  min-width: 44px;
+}
+</style>

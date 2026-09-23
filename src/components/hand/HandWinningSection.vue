@@ -39,3 +39,53 @@ const uniqueTiles = computed(() =>
   )].sort((a, b) => a - b)
 )
 </script>
+
+<style scoped>
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.winning-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.winning-choice {
+  position: relative;
+  border: 1px solid transparent;
+  background: #f5f7f3;
+  padding: 6px;
+  min-height: 64px;
+}
+
+.winning-choice.is-win {
+  background: #e8f0dc;
+  border-color: #64804c;
+  box-shadow: inset 0 0 0 1px #64804c;
+}
+
+.win-badge {
+  position: absolute;
+  top: -7px;
+  right: -4px;
+  background: var(--green);
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  width: 19px;
+  height: 19px;
+  display: grid;
+  place-items: center;
+}
+</style>

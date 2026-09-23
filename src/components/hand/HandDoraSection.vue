@@ -21,3 +21,41 @@ import CounterInput from '../common/CounterInput.vue'
 
 defineProps({ hand: { type: Object, required: true } })
 </script>
+
+<style scoped>
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+details > summary {
+  cursor: pointer;
+  font-size: 14px;
+  min-height: 44px;
+  line-height: 1.5;
+  padding: 12px 0;
+  color: var(--green);
+}
+
+details.panel > summary {
+  font-weight: 600;
+  font-size: 16px;
+  display: list-item;
+}
+
+summary > small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 8px;
+}
+</style>

@@ -133,3 +133,168 @@ function openCell(fu, han, yakuman = 0) {
   props.onCell(fu, han, yakuman)
 }
 </script>
+
+<style scoped>
+.page-heading {
+  padding: 6px 4px 20px;
+}
+
+.page-heading h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.page-heading p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  color: var(--muted);
+}
+
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.basic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.basic-grid :deep(.choices button) {
+  min-width: 50px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.footnote {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.table-scroll {
+  max-height: 67vh;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 18px -8px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+th {
+  background: #edf3ef;
+  font-weight: 600;
+  padding: 12px 6px;
+  color: var(--green);
+  font-size: 12px;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  border-bottom: 1px solid var(--line);
+}
+
+tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  white-space: nowrap;
+  border-right: 1px solid var(--line);
+}
+
+thead th:first-child {
+  left: 0;
+  z-index: 4;
+}
+
+td {
+  border-bottom: 1px solid #e5ece7;
+  border-right: 1px solid #e5ece7;
+}
+
+td button {
+  border: 0;
+  background: transparent;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.8;
+  padding: 10px 3px;
+  min-height: 52px;
+  white-space: nowrap;
+  border-radius: 0;
+}
+
+td small {
+  display: block;
+  font-size: 11px;
+  color: #7b7439;
+}
+
+.limit {
+  background: #f9f7e9;
+}
+
+.current-cell {
+  box-shadow: inset 0 0 0 2px var(--green);
+  background: var(--light);
+}
+
+.dash {
+  color: #bcc7c0;
+}
+
+.limit-list > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  padding: 17px 0;
+  background: none;
+  gap: 16px;
+}
+
+.limit-list small {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.limit-list strong {
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: right;
+  color: var(--green);
+  white-space: nowrap;
+}
+</style>

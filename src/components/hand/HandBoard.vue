@@ -102,3 +102,179 @@ const openGroups = computed(() =>
     .map(({ g, index }) => ({ group: g, index }))
 )
 </script>
+
+<style scoped>
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.hand-board {
+  padding: 14px 10px;
+}
+
+.head-value {
+  margin-left: auto;
+  color: var(--green);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.hand-zone {
+  border: 1px solid var(--line);
+  background: #f8faf8;
+  border-radius: 12px;
+  padding: 8px;
+  margin: 12px 0;
+}
+
+.open-zone {
+  background: #f2f5ed;
+}
+
+.zone-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.zone-title b {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.loose-tiles {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 2px;
+  row-gap: 4px;
+  min-height: 106px;
+  align-content: start;
+}
+
+.loose-tiles > button {
+  padding: 0;
+  border: 0;
+  background: none;
+  min-width: 0;
+  min-height: 49px;
+  display: flex;
+  justify-content: center;
+}
+
+.loose-tiles :deep(.mahjong-tile) {
+  width: 30px;
+  height: 48px;
+  padding: 3px 2px 11px;
+  border-bottom-width: 2px;
+  border-radius: 3px;
+}
+
+.loose-tiles .empty-zone {
+  grid-column: 1 / -1;
+  padding: 16px 0;
+}
+
+.loose-tiles > button:hover {
+  background: #f3ded1;
+}
+
+.empty-zone {
+  font-size: 13px;
+  color: #83948b;
+  padding: 14px 0;
+}
+
+.empty-zone.compact {
+  padding: 4px 0;
+}
+
+.hand-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.text-button {
+  border: 0;
+  background: none;
+  color: var(--green);
+  font-size: 13px;
+  padding: 8px 4px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.board-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.inline-error {
+  color: var(--red);
+  font-size: 13px;
+  line-height: 1.8;
+  background: #fff1ec;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 14px 0;
+}
+
+.hand-board :deep(.section-title h2) {
+  font-size: 17px;
+}
+
+.hand-board :deep(.section-title) {
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.hand-board .hand-zone {
+  margin: 9px 0;
+}
+
+.hand-board .zone-title {
+  margin-bottom: 6px;
+}
+
+.hand-board .zone-title span {
+  font-size: 10px;
+}
+
+.hand-board .open-zone .empty-zone {
+  font-size: 12px;
+}
+
+.hand-board .hand-groups {
+  gap: 3px;
+}
+
+.hand-board .board-footer {
+  margin-top: 4px;
+}
+
+.hand-board .board-footer .text-button {
+  font-size: 12px;
+}
+
+:deep(.pad-heading h3) {
+  font-size: 15px;
+}
+
+:deep(.pad-instruction) {
+  font-size: 12px;
+}
+
+.loose-tiles :deep(.tile-caption) {
+  font-size: 8px;
+}
+</style>

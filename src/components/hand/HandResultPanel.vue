@@ -71,3 +71,152 @@ const emptyTitle = computed(() => {
   return '继续录牌，<br>不用自己拆算。'
 })
 </script>
+
+<style scoped>
+.result {
+  background: var(--green);
+  color: white;
+  padding: 22px;
+  border-radius: var(--radius);
+  margin-bottom: 18px;
+}
+
+.result .eyebrow {
+  color: #b9d5cc;
+}
+
+.result h2 {
+  font-size: 23px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+.result p {
+  color: #c8ddd6;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 8px 0;
+}
+
+.result-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-tag {
+  font-size: 12px;
+  color: #d3e5dc;
+  border: 1px solid #5e867b;
+  border-radius: 20px;
+  padding: 4px 9px;
+}
+
+.result-caption {
+  font-size: 27px !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.tier {
+  font-size: 13px;
+  color: var(--accent);
+  border: 1px solid #b6a579;
+  border-radius: 5px;
+  padding: 2px 8px;
+}
+
+.payout {
+  padding: 16px 0;
+  border-bottom: 1px solid #437168;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.payout > span {
+  color: #c8ddd6;
+  font-size: 14px;
+}
+
+.payout strong {
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.payout strong small {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.payout > small {
+  color: #c8ddd6;
+  font-size: 12px;
+}
+
+.total,
+.deposit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  padding-top: 16px;
+}
+
+.total b {
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.total small {
+  font-size: 12px;
+}
+
+.result-footer {
+  font-size: 11px;
+  color: #b9d5cc;
+  margin-top: 18px;
+}
+
+.payouts {
+  display: flex;
+  gap: 22px;
+}
+
+.error-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.error-list button {
+  font-size: 13px;
+  color: #ffe5d6;
+  background: #ffffff12;
+  border: 1px solid #ffffff20;
+  line-height: 1.7;
+  text-align: left;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.auto-yaku-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.auto-yaku-tags span {
+  border: 1px solid #6b9286;
+  color: #e1e9dd;
+  padding: 4px 7px;
+  font-size: 11px;
+  border-radius: 5px;
+}
+</style>

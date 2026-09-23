@@ -95,3 +95,118 @@ function yakuMeta(y) {
   return `门前 ${y.closed} 番 · ${y.open ? `副露 ${y.open} 番` : '门前限定'}`
 }
 </script>
+
+<style scoped>
+.page-heading {
+  padding: 6px 4px 20px;
+}
+
+.page-heading h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.page-heading p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  color: var(--muted);
+}
+
+.yaku-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.yaku-list {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+
+:deep(.yaku-total) {
+  width: 100%;
+}
+
+.auto-reference {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.auto-reference .yaku-card {
+  align-self: start;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 6px 18px 10px;
+}
+
+.auto-reference .yaku-card.picked {
+  border-color: #5a9282;
+  box-shadow: inset 3px 0 0 #2c6b57;
+}
+
+.auto-reference .yaku-pick {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  padding: 14px 0;
+  width: 100%;
+}
+
+.auto-reference .yaku-pick strong {
+  font-size: 17px;
+}
+
+.auto-reference .yaku-pick small {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 7px;
+}
+
+.auto-reference .yaku-value {
+  font-size: 15px;
+  color: var(--green);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.auto-reference .yaku-card p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.auto-reference .yaku-card details {
+  border-top: 1px solid #eef2ef;
+}
+
+.auto-reference .yaku-card details > summary {
+  cursor: pointer;
+  font-size: 14px;
+  min-height: 44px;
+  line-height: 1.5;
+  padding: 12px 0;
+  color: var(--green);
+}
+
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+</style>

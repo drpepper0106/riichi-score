@@ -54,3 +54,101 @@ function clearYaku() {
   state.ura = 0
 }
 </script>
+
+<style scoped>
+.panel {
+  background: white;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.selected-summary {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 9px;
+  color: var(--green);
+  font-size: 12px;
+  background: var(--light);
+}
+
+button.chip {
+  min-height: 44px;
+}
+
+.text-button {
+  border: 0;
+  background: none;
+  color: var(--green);
+  font-size: 13px;
+  padding: 8px 4px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.note {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  padding: 12px 14px;
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+.yaku-sum {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 20px 0;
+}
+
+.yaku-sum span {
+  font-size: 14px;
+}
+
+.yaku-sum b {
+  font-size: 26px;
+  color: var(--green);
+}
+
+.inline-error {
+  color: var(--red);
+  font-size: 13px;
+  line-height: 1.8;
+  background: #fff1ec;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 14px 0;
+}
+
+.primary {
+  background: var(--green);
+  color: white;
+  border-color: var(--green);
+  font-weight: 600;
+}
+
+.full {
+  width: 100%;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 18px 0;
+}
+</style>

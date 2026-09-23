@@ -15,3 +15,12 @@ const props = defineProps({
 
 const tiles = computed(() => parseTileExample(props.example))
 </script>
+
+<style scoped>
+.tiles {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+</style>
